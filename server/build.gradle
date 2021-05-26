@@ -1,0 +1,67 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.0'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+
+
+implementation group: 'javax.ws.rs', name: 'jsr311-api', version: '1.1.1'
+implementation group: 'com.guicedee.services', name: 'jakarta.ws.rs-api', version: '1.1.1.7'
+implementation group: 'jakarta.ws.rs', name: 'jakarta.ws.rs-api', version: '2.1.2'
+
+	// jersey
+	implementation group: 'org.glassfish.grizzly', name: 'grizzly-http-server', version: '2.3.19'
+	implementation group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '3.0.2'
+	implementation group: 'org.glassfish.jersey.core', name: 'jersey-client', version: '3.0.2'
+	implementation group: 'com.sun.jersey', name: 'jersey-server', version: '1.0.3.1'
+	implementation group: 'org.glassfish.grizzly', name: 'grizzly-http-server', version: '3.0.0'
+	implementation group: 'org.glassfish.jersey.containers', name: 'jersey-container-grizzly2-http', version: '3.0.2'
+	implementation group: 'com.sun.jersey', name: 'jersey-grizzly2', version: '1.19.4'
+	implementation group: 'com.sun.jersey', name: 'jersey-server', version: '1.19.4'
+	implementation group: 'com.sun.jersey', name: 'jersey-core', version: '1.19.4'
+	implementation group: 'com.sun.jersey', name: 'jersey-client', version: '1.19.4'
+	implementation group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet-core', version: '3.0.2'
+	implementation group: 'org.glassfish.jersey.ext', name: 'jersey-spring3', version: '2.26-b03'
+	
+	implementation 'org.springframework.boot:spring-boot-starter-jersey'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-web-services'
+
+	implementation group: 'com.sun.xml.bind', name: 'jaxb-impl', version: '3.0.0'
+	implementation group: 'com.sun.xml.bind', name: 'jaxb-core', version: '2.3.0.1'
+	implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0-b170201.1204'
+	implementation group: 'jakarta.xml.bind', name: 'jakarta.xml.bind-api', version: '3.0.1'	
+	implementation group: 'javax.ws.rs', name: 'jsr311-api', version: '1.1.1'
+	implementation group: 'org.springframework', name: 'spring-tx', version: '5.3.7'
+	implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+
+
+
+
+
+
+implementation group: 'com.fasterxml.jackson.jaxrs', name: 'jackson-jaxrs-json-provider', version: '2.12.3'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
+}
