@@ -80,7 +80,7 @@ public class Game {
         //convert to index
         col = col-1;
         row = row-1;
-        int expected = 1;
+        int expected = 4;
         int count =0; 
         int n = grid.length;
         int m = grid[0].length;
